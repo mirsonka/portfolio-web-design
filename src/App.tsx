@@ -53,27 +53,27 @@ const PROJECTS: TProject[] = [
     link: 'https://hsedesign.ru/project/dizajn-mobilnogo-prilozheniya-bcea8fd66b1b4f56a8287ed01764faef',
     images: [
       {
-        src: 'src/assets/project-1/главная (сверху).png',
+        src: '/portfolio-web-design/assets/project-1/главная (сверху).png',
         isMain: true,
       },
       {
-        src: 'src/assets/project-1/большая 2.png',
+        src: '/portfolio-web-design/assets/project-1/большая 2.png',
         isDoubleSize: true,
       },
       {
-        src: 'src/assets/project-1/чуть ниже верхней.png',
+        src: '/portfolio-web-design/assets/project-1/чуть ниже верхней.png',
       },
       {
-        src: 'src/assets/project-1/правее.png',
+        src: '/portfolio-web-design/assets/project-1/правее.png',
       },
       {
-        src: 'src/assets/project-1/правее2.png',
+        src: '/portfolio-web-design/assets/project-1/правее2.png',
       },
       {
-        src: 'src/assets/project-1/ниже.png',
+        src: '/portfolio-web-design/assets/project-1/ниже.png',
       },
       {
-        src: 'src/assets/project-1/ниже2.png',
+        src: '/portfolio-web-design/assets/project-1/ниже2.png',
       },
     ],
   },
@@ -101,24 +101,24 @@ const PROJECTS: TProject[] = [
     link: 'https://hsedesign.ru/project/veb-plakat-3cf193a884dd4e8e907917c3fb68f04e',
     images: [
       {
-        src: 'src/assets/project-2/обложка.png',
+        src: '/portfolio-web-design/assets/project-2/обложка.png',
         isMain: true,
       },
       {
-        src: 'src/assets/project-2/большая.png',
+        src: '/portfolio-web-design/assets/project-2/большая.png',
         isDoubleSize: true,
       },
       {
-        src: 'src/assets/project-2/кошка.png',
+        src: '/portfolio-web-design/assets/project-2/кошка.png',
       },
       {
-        src: 'src/assets/project-2/справа .png',
+        src: '/portfolio-web-design/assets/project-2/справа .png',
       },
       {
-        src: 'src/assets/project-2/справа 2.png',
+        src: '/portfolio-web-design/assets/project-2/справа 2.png',
       },
       {
-        src: 'src/assets/project-2/снизу.png',
+        src: '/portfolio-web-design/assets/project-2/снизу.png',
       },
       {
         src: '',
@@ -151,18 +151,18 @@ const CAROUSEL_CARDS: ICarouselCard[] = [
     ],
     images: [
       {
-        src: 'src/assets/slider-project-1/1.png',
+        src: '/portfolio-web-design/assets/slider-project-1/1.png',
         isMain: true,
       },
       {
-        src: 'src/assets/slider-project-1/2.png',
+        src: '/portfolio-web-design/assets/slider-project-1/2.png',
         isDoubleSize: true,
       },
       {
-        src: 'src/assets/slider-project-1/3.png',
+        src: '/portfolio-web-design/assets/slider-project-1/3.png',
       },
       {
-        src: 'src/assets/slider-project-1/4.png',
+        src: '/portfolio-web-design/assets/slider-project-1/4.png',
       },
     ],
   },
@@ -184,18 +184,18 @@ const CAROUSEL_CARDS: ICarouselCard[] = [
     ],
     images: [
       {
-        src: 'src/assets/slider-project-2/1.png',
+        src: '/portfolio-web-design/assets/slider-project-2/1.png',
         isMain: true,
       },
       {
-        src: 'src/assets/slider-project-2/2.png',
+        src: '/portfolio-web-design/assets/slider-project-2/2.png',
         isDoubleSize: true,
       },
       {
-        src: 'src/assets/slider-project-2/3.png',
+        src: '/portfolio-web-design/assets/slider-project-2/3.png',
       },
       {
-        src: 'src/assets/slider-project-2/4.png',
+        src: '/portfolio-web-design/assets/slider-project-2/4.png',
       },
     ],
   },
@@ -221,18 +221,18 @@ const CAROUSEL_CARDS: ICarouselCard[] = [
     ],
     images: [
       {
-        src: 'src/assets/slider-project-3/1.png',
+        src: '/portfolio-web-design/assets/slider-project-3/1.png',
         isMain: true,
       },
       {
-        src: 'src/assets/slider-project-3/2.png',
+        src: '/portfolio-web-design/assets/slider-project-3/2.png',
         isDoubleSize: true,
       },
       {
-        src: 'src/assets/slider-project-3/3.png',
+        src: '/portfolio-web-design/assets/slider-project-3/3.png',
       },
       {
-        src: 'src/assets/slider-project-3/4.png',
+        src: '/portfolio-web-design/assets/slider-project-3/4.png',
       },
     ],
   },
