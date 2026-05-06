@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('/src/assets/bebasneuecyrillic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  background: black;
+}
+
+/* Contact button hover */
+.contact-btn {
+  background: #ffffff;
+  transition:
+    background 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
+}
+
+.contact-btn:hover {
+  background: #f8bbe4;
+  transform: scale(1.05);
+}
