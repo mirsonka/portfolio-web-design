@@ -27,6 +27,12 @@ const ButtonWithHover = ({ children, onClick }: IButtonWithHoverProps) => {
 
     if (!button || !canvas) return
 
+    const isDesktopHover = window.matchMedia(
+      '(min-width: 640px) and (hover: hover) and (pointer: fine)',
+    ).matches
+
+    if (!isDesktopHover) return
+
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
@@ -124,14 +130,15 @@ const ButtonWithHover = ({ children, onClick }: IButtonWithHoverProps) => {
       ref={buttonRef}
       type="button"
       onClick={onClick}
-      className="group relative h-14 w-full overflow-hidden rounded-[30px] border border-black bg-white p-0 text-base font-semibold text-black transition-colors duration-300 hover:cursor-pointer sm:w-55 sm:text-lg"
+      className="group relative h-14 w-full overflow-hidden rounded-[30px] border border-black bg-white p-0 text-base font-semibold text-black active:bg-white sm:w-55 sm:text-lg sm:transition-colors sm:duration-300 hover:cursor-pointer"
+      style={{ WebkitTapHighlightColor: 'transparent' }}
     >
       <canvas
         ref={canvasRef}
-        className="pointer-events-none absolute inset-0 block h-full w-full"
+        className="pointer-events-none absolute inset-0 hidden h-full w-full sm:block"
       />
 
-      <span className="pointer-events-none relative z-10 transition-colors duration-300 font-normal">
+      <span className="pointer-events-none relative z-10 font-normal sm:transition-colors sm:duration-300">
         {children}
       </span>
     </button>
