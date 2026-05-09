@@ -7,6 +7,35 @@ interface INavigationProps {
   isCarouselVisible: boolean
 }
 
+const scrollToSection = (sectionId: string) => {
+  const section = document.getElementById(sectionId)
+  if (!section) return
+
+  const startY = window.scrollY
+  const targetY = section.getBoundingClientRect().top + startY
+  const distance = targetY - startY
+  const duration = 350
+  const startTime = performance.now()
+
+  const easeOutCubic = (progress: number) => 1 - Math.pow(1 - progress, 3)
+
+  const animateScroll = (currentTime: number) => {
+    const elapsed = currentTime - startTime
+    const progress = Math.min(elapsed / duration, 1)
+
+    window.scrollTo({
+      top: startY + distance * easeOutCubic(progress),
+      behavior: 'instant',
+    })
+
+    if (progress < 1) {
+      requestAnimationFrame(animateScroll)
+    }
+  }
+
+  requestAnimationFrame(animateScroll)
+}
+
 const Navigation: FC<INavigationProps> = ({
   projects,
   visibleProjectIds,
@@ -20,6 +49,10 @@ const Navigation: FC<INavigationProps> = ({
           <a
             key={project.id}
             href={`#project-${project.id}`}
+            onClick={(event) => {
+              event.preventDefault()
+              scrollToSection(`project-${project.id}`)
+            }}
             className={`text-lg transition-colors duration-300 ${
               isActive
                 ? 'text-white font-semibold'
@@ -32,6 +65,10 @@ const Navigation: FC<INavigationProps> = ({
       })}
       <a
         href="#carousel"
+        onClick={(event) => {
+          event.preventDefault()
+          scrollToSection('carousel')
+        }}
         className={`text-lg transition-colors duration-300 ${
           isCarouselVisible
             ? 'text-white font-semibold'
